@@ -1,0 +1,33 @@
+#business{
+    margin: 20px;
+    background: lighten($gray-color, 10%);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    .business-image {
+        background-image: url(../../img/business.jpeg);
+        background-size: cover;
+        background-position: center;
+        height: 50vh;
+        flex-basis:48%;
+    }
+    .business-side{
+        flex-basis: 48%;
+        margin-top: 30px;
+        h2{
+            margin-bottom: 4vh;
+        }
+        p{
+            margin-bottom: 5vh;
+        }
+    }
+    @media screen and (max-width:700px) {
+        flex-direction: column;
+        .business-side{
+            a{
+                display: block;
+                text-align: center;
+            }
+        }
+    }
+}

@@ -1,0 +1,93 @@
+#showcase{
+    display: flex;
+    justify-content: space-between;
+    .showcase-image{
+        background-image: url(../../img/showcase.jpeg);
+        background-size: cover;
+        background-position: center;
+        height: 70vh;
+        flex-basis: 78%;        
+        display: flex;
+        align-items: center;
+        .showcase-content{
+            color: $blue-color;
+            padding: 30px;
+            h1{
+                margin-bottom: 30px;
+                font-size: 2.8rem;
+            }
+            p{
+                margin-bottom: 30px;
+                font-size: 1.3rem;
+                line-height: 1.5;
+            }
+        }
+    }
+    .showcase-sidebar{
+        flex-basis: 19%;
+        height: 70vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+        .showcase-sidebar-item{
+            flex-basis: 48%;
+            background : lighten($gray-color, 10%);            
+            padding: 20px;
+            h2{
+                margin-bottom: 5vh;
+                font-size: 1rem;
+            }
+            h1{
+                margin-bottom: 7vh;
+                font-size: 1.3rem;
+            }
+            a{
+               
+            }
+        }
+    }
+    @media screen and (max-width:700px) {
+        flex-direction: column;
+        .showcase-image{
+            margin-bottom: 20px;
+            .showcase-content{
+                h1{
+                    font-size: 2.4rem;
+                }
+                p{
+                    font-size: 1.1rem;
+                }
+            }
+        }
+        .showcase-sidebar{
+            flex-direction: row;
+            height: auto;
+            
+            .showcase-sidebar-item{
+                flex-basis: 48%;
+            }
+        }
+    }
+
+    @media screen and (max-width: 500px) {
+        .showcase-image{
+            .showcase-content{
+                padding: 20px;
+                h1{
+                    font-size: 1.8rem;
+                }
+                p{
+                    font-size: 1rem;
+                }
+            }
+        }
+        .showcase-sidebar{
+            flex-flow: wrap;           
+            .showcase-sidebar-item{
+                flex-basis: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

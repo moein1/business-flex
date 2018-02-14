@@ -1,0 +1,35 @@
+#progress{
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    .progress-item{
+        flex-basis: 23%;
+        padding: 20px;
+        border-radius: 4px;
+        box-shadow: 0 0 10px 0 darken($gray-color, 20%);
+        background: lighten($gray-color, 10%);
+        i{
+            font-size:  3rem;
+            margin-bottom: 5vh;
+            color: $blue-color;
+        }
+        h2{
+            font-size: 1rem;
+            margin-bottom: 5vh;
+        }
+    }
+    @media screen and (max-width:700px) {
+        flex-flow: wrap;
+        .progress-item{
+            flex-basis: 48%;
+            margin-bottom: 20px;
+        }
+    }
+
+    @media screen and (max-width: 500px) {
+        .progress-item{
+            flex-basis: 100%;
+        }
+    }
+}

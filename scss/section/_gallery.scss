@@ -1,0 +1,32 @@
+#gallery{
+    margin:20px;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: wrap;
+    .gallery-item{
+        flex-basis: 24%;
+        margin-bottom: 20px;
+        @for $i from 1 through 8{
+            &:nth-child(#{$i}){
+                background-image: url(../../img/img#{$i}.jpg);
+                background-size: cover;
+                background-position: center;
+                height: 40vh;
+                transition: opacity ease 400ms;
+                &:hover{
+                    opacity: .8;
+                }
+            }
+        }       
+    }
+    @media screen and (max-width:700px) {
+        .gallery-item{
+            flex-basis: 49%;
+        }
+    }
+    @media screen and (max-width: 500px) {
+        .gallery-item{
+            flex-basis: 100%;
+        }
+    }
+}
